@@ -20,9 +20,11 @@ git clone --depth 1 -b v6.1.8 https://github.com/destan19/OpenAppFilter package/
 rm -rf package/luci-app-store
 git clone --depth=1 https://github.com/linkease/istore.git package/luci-app-store
 
-# 集客 AC 控制（gecoosac）
+# 集客 AC 控制（gecoosac 主程序 + luci 同树）
 rm -rf package/luci-app-gecoosac
-git clone --depth=1 https://github.com/laipeng668/luci-app-gecoosac package/luci-app-gecoosac
+rm -rf package/gecoosac
+git clone --depth=1 https://github.com/openwrt-fork/openwrt-gecoosac package/openwrt-gecoosac
+
 
 # WAN MAC 修改插件
 rm -rf package/luci-app-wan-mac
