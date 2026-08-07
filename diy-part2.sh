@@ -20,4 +20,6 @@ sed -i "s/hostname='ImmortalWrt'/hostname='MyRouter'/g" package/base-files/files
 # ===================== 修改固件版本显示名称（可选） =====================
 # sed -i "s/DISTRIB_DESCRIPTION=.*/DISTRIB_DESCRIPTION='ImmortalWrt By DIY $(date +"%Y%m%d")'/g" package/base-files/files/etc/openwrt_release
 
-# ===================== 修改 argon 为默认主题 =====================
+# ========== 4. Argon 主题 ==========
+echo ">>> 设置 Argon 为默认主题..."
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
