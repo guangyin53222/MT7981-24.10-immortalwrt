@@ -25,6 +25,12 @@ mv tmp/openwrt-app-actions/applications/luci-app-wan-mac package/luci-app-wan-ma
 rm -rf tmp/openwrt-app-actions
 # 添加 luci-app-tcpdump 抓包插件
 git clone https://github.com/KFERMercer/luci-app-tcpdump.git ./package/luci-app-tcpdump
+
+# Harbor File
+rm -rf package/luci-app-harbor-file
+git clone --depth=1 https://github.com/destan19/luci-app-harbor-file package/luci-app-harbor-file
+
+
 # 更新并安装插件源
 ./scripts/feeds update -a
 ./scripts/feeds install -a
