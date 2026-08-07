@@ -33,12 +33,7 @@ if [ ! -d "package/luci-app-gecoosac" ]; then
  echo "⚠️ luci-app-gecoosac 克隆失败，跳过（可能不兼容 24.10）"
 fi
 
-# ---------- 5. PassWall (科学上网) ----------
-if [ ! -d "package/luci-app-passwall" ]; then
- echo ">>> 克隆 PassWall..."
- git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall 2>/dev/null || \
- echo "⚠️ PassWall 克隆失败，跳过"
-fi
+
 
 # ---------- 说明 ----------
 # ❌ 以下包在 24.10 + ucode LuCI 下会出问题，已移除：
