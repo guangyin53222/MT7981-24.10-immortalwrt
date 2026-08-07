@@ -10,15 +10,14 @@
 # See /LICENSE for more information.
 #
 
-# 自定义默认网关，后方的192.168.61.1即是可自定义的部分
+# ===================== 修改默认 IP 地址 =====================
+# ImmortalWrt 24.10 默认是 192.168.1.1，改为 192.168.100.1
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
 
-#sed -i "s/hostname='ImmortalWrt'/hostname='360T7'/g" package/base-files/files/bin/config_generate
+# ===================== 修改默认主机名（可选，取消注释启用） =====================
+sed -i "s/hostname='ImmortalWrt'/hostname='MyRouter'/g" package/base-files/files/bin/config_generate
 
-# 固件版本名称自定义
-#sed -i "s/DISTRIB_DESCRIPTION=.*/DISTRIB_DESCRIPTION='OpenWrt By gino $(date +"%Y%m%d")'/g" package/base-files/files/etc/openwrt_release
+# ===================== 修改固件版本显示名称（可选） =====================
+# sed -i "s/DISTRIB_DESCRIPTION=.*/DISTRIB_DESCRIPTION='ImmortalWrt By DIY $(date +"%Y%m%d")'/g" package/base-files/files/etc/openwrt_release
 
-# 修改 argon 为默认主题
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-
-
+# ===================== 修改 argon 为默认主题 =====================
