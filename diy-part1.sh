@@ -14,7 +14,7 @@
 # OpenAppFilter（家长控制/应用过滤）
 # 注意：ImmortalWrt 24.10 上包名是 luci-app-oaf，与 Turbo ACC 冲突需关闭 ACC
 rm -rf package/OpenAppFilter
-git clone --depth 1 -b v6.1.8 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+git clone --depth 1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 
 # iStore 软件中心
 rm -rf package/luci-app-store
